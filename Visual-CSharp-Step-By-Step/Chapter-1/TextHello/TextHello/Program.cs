@@ -10,6 +10,8 @@ namespace TextHello
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World");
+            Console.ReadLine(); //Espera o usuário pressionar a tecla enter
         }
     }
 }
