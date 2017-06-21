@@ -1,4 +1,4 @@
-﻿using System;
+﻿//using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +10,8 @@ namespace TextHello
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
-            Console.ReadLine(); //Espera o usuário pressionar a tecla enter
+            System.Console.WriteLine("Hello World");
+            System.Console.ReadLine(); //Espera o usuário pressionar a tecla enter
         }
     }
 }
