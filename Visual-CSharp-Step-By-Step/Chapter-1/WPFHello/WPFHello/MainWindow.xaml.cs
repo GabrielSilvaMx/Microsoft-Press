@@ -24,5 +24,10 @@ namespace WPFHello
         {
             InitializeComponent();
         }
+
+        private void ok_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello " + userName.Text);
+        }
     }
 }

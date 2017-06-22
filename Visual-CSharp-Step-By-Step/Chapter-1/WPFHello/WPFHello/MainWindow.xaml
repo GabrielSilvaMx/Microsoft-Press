@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFHello"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Hello" Height="162" Width="308">
     <Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="30,25,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="450*"/>
+            <ColumnDefinition Width="67*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Please enter your name" HorizontalAlignment="Left" Margin="30,25,0,0" VerticalAlignment="Top" Width="160"/>
+        <TextBox x:Name="userName" HorizontalAlignment="Left" Height="23" Margin="30,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119"/>
+        <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="186,56,0,0" VerticalAlignment="Top" Width="75" Click="ok_Click"/>
 
     </Grid>
 </Window>
