@@ -62,7 +62,9 @@ namespace PrimitiveDataTypes
 
         private void showIntValue()
         {
-            value.Text = "to do";
+            int variable;
+            variable = 42;
+            value.Text = "42";
         }
 
         private void showLongValue()
@@ -81,7 +83,9 @@ namespace PrimitiveDataTypes
 
         private void showDoubleValue()
         {
-            value.Text = "to do";
+            double variable;
+            variable = 0.42;
+            value.Text = "0.42";
         }
 
         private void showDecimalValue()
@@ -107,7 +111,9 @@ namespace PrimitiveDataTypes
 
         private void showBoolValue()
         {
-            value.Text = "to do";
+            bool variable;
+            variable = false;
+            value.Text = "false";
         }
 
         private void quitClick(object sender, RoutedEventArgs e)
