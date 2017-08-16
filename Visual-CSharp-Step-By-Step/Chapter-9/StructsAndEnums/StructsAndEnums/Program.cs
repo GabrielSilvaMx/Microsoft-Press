@@ -12,7 +12,14 @@ namespace StructsAndEnums
     {
         static void DoWork()
         {
-            // to do
+            Month first = Month.January;
+            Console.WriteLine(first);
+            first++;
+            Console.WriteLine(first);
+            first = Month.December;
+            Console.WriteLine(first);
+            first++; // Incrementa ao terminar a enumeração
+            Console.WriteLine(first); // Escreve 12
         }
 
         static void Main()
