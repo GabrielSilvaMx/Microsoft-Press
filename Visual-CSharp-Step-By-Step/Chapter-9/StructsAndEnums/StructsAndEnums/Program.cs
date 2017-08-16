@@ -34,6 +34,23 @@ namespace StructsAndEnums
             // Escreve uma data
             Date weddingAnniversary = new Date(2010, Month.July, 4);
             Console.WriteLine(weddingAnniversary);
+
+            // Cópia da estrutura
+            Date weddingAnniversaryCopy = weddingAnniversary;
+            Console.WriteLine("O valor da cópia é {0}", weddingAnniversaryCopy);
+
+            // Avançando um mês
+            weddingAnniversaryCopy.AdvanceMonth();
+            Console.WriteLine("O novo valor de weedingAnniversary é {0}", weddingAnniversary);
+            Console.WriteLine("O valor da cópia é {0}", weddingAnniversaryCopy);
+
+            // Se fosse uma classe em vez de estrutura
+            Console.WriteLine("\nCompare com classes:\n");
+            DateClass weddingAnniversaryClass = new DateClass(2010, Month.July, 4);
+            DateClass weddingAnniversaryClassCopy = weddingAnniversaryClass;
+            weddingAnniversaryClassCopy.AdvanceMonth();
+            Console.WriteLine("O novo valor de weedingAnniversary é {0}", weddingAnniversaryClass);
+            Console.WriteLine("O valor da cópia é {0}", weddingAnniversaryClassCopy);
         }
 
         static void Main()
