@@ -9,9 +9,14 @@ namespace Cards
         private PlayingCard[] cards = new PlayingCard[HandSize];
         private int playingCardCount = 0;
 
-		public void AddCardToHand(PlayingCard cardDealt)
-		{
-            // to do - add the specified card to the hand
+        public void AddCardToHand(PlayingCard cardDealt)
+        {
+            if (this.playingCardCount >= HandSize)
+            {
+                throw new ArgumentException("Too many cards");
+            }
+            this.cards[this.playingCardCount] = cardDealt;
+            this.playingCardCount++;
 		}
 
 		public override string ToString()
