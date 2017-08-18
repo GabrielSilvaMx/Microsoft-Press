@@ -6,17 +6,16 @@ namespace Cards
 	class Hand
 	{
         public const int HandSize = 13;
-        private PlayingCard[] cards = new PlayingCard[HandSize];
+        private ArrayList cards = new ArrayList();
         private int playingCardCount = 0;
 
 		public void AddCardToHand(PlayingCard cardDealt)
 		{
-            if (this.playingCardCount >= HandSize)
+            if (this.cards.Count >= HandSize)
             {
                 throw new ArgumentException("Too many cards");
             }
-            this.cards[this.playingCardCount] = cardDealt;
-            this.playingCardCount++;
+            this.cards.Add(cardDealt);            
 		}
 
 		public override string ToString()
