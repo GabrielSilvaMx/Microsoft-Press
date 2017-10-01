@@ -66,6 +66,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Circle.cs" />
+    <Compile Include="DrawningShape.cs" />
     <Compile Include="Square.cs" />
     <Page Include="DrawingPad.xaml">
       <Generator>MSBuild:Compile</Generator>

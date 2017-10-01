@@ -9,48 +9,25 @@ using System.Windows.Controls;
 
 namespace Drawing
 {
-    class Square : IDraw, IColor
+    class Square : DrawningShape, IDraw, IColor
     {
-        private int sideLength;
-        private int locX = 0, locY = 0;
-        private Rectangle rect = null;
-
         public Square(int sideLength)
+            : base(sideLength)
         {
-            this.sideLength = sideLength;
         }
 
-        public void SetLocation(int xCoord, int yCoord)
+        public override void Draw(Canvas canvas)
         {
-            this.locX = xCoord;
-            this.locY = yCoord;
-        }
-
-        public void Draw(Canvas canvas)
-        {
-            if (this.rect != null)
+            if (this.shape != null)
             {
-                canvas.Children.Remove(this.rect);
+                canvas.Children.Remove(this.shape);
             }
             else
             {
-                this.rect = new Rectangle();
+                this.shape = new Rectangle();
             }
 
-            this.rect.Height = this.sideLength;
-            this.rect.Width = this.sideLength;
-            Canvas.SetTop(this.rect, this.locX);
-            Canvas.SetLeft(this.rect, this.locY);
-            canvas.Children.Add(rect);
-        }
-
-        public void SetColor(Color color)
-        {
-            if (rect != null)
-            {
-                SolidColorBrush brush = new SolidColorBrush(color);
-                rect.Fill = brush;
-            }
+            base.Draw(canvas);
         }
     }
 }
